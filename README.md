@@ -1,4 +1,5 @@
 How much time I spent:
+
 I was studying Angular on tutorial 6 evenings for 1 hour. The result you can see here https://github.com/akbrest/angular-tour-of-heroes
 
 # AngularUsersTask
