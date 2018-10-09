@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { User} from './user';
 import { USERS} from './mock-users';
@@ -10,8 +11,8 @@ export class UserService {
 
   constructor() { }
 
-  getUsers(): User[] {
-    return USERS;
+  getUsers(): Observable<User[]> {
+    return of(USERS);
   }
 
 }
