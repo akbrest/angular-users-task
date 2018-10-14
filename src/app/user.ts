@@ -1,10 +1,13 @@
-export  class  User {
+import {Address} from './address';
+import {Company} from './company';
+
+export class User {
  id: number;
  name: string;
  username: string;
  email: string;
- address: object;
+ address: Address;
  phone: string;
  website: string;
- company: object;
+ company: Company;
 }

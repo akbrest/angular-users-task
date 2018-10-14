@@ -1,0 +1,30 @@
+<ul>
+  <li><span>Name</span>: {{user.name}}</li>
+  <li><span>Username</span>: {{user.username}}</li>
+  <li><span>Email</span>: {{user.email}}</li>
+  <li><span>Address</span>
+    <ul>
+      <li><span>Street</span>: {{user.address.street}}</li>
+      <li><span>Suite</span>: {{user.address.suite}}</li>
+      <li><span>City</span>: {{user.address.city}}</li>
+      <li><span>Zipcode</span>: {{user.address.zipcode}}</li>
+      <li><span>Geo</span>
+        <ul>
+          <li><span>Latitude</span>: {{user.address.geo.lat}}</li>
+          <li><span>Longitude</span>: {{user.address.geo.lng}}</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span>Phone</span>: {{user.phone}}</li>
+  <li><span>Website</span>: {{user.website}}</li>
+  <li><span>Company</span>
+    <ul>
+      <li><span>Street</span>: {{user.company.name}}</li>
+      <li><span>Catch phrase</span>: {{user.company.catchPhrase}}</li>
+      <li><span>Business specialty</span>: {{user.company.bs}}</li>
+    </ul>
+  </li>
+</ul>
+
+<button (click)="goBack()">go back</button>
