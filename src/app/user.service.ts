@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import { User } from './user';
-import { USERS } from './mock-users';
+import { API } from './config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return of(USERS);
+    const url = `${API}/users`;
+    return this.http.get<User[]>(url);
   }
 
   getUser(id: number): Observable<User> {
-    return of(USERS.find(user => user.id === id));
+    const url = `${API}/users/${id}`;
+    return this.http.get<User>(url);
   }
 }
