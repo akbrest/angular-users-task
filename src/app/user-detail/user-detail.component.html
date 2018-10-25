@@ -1,30 +1,31 @@
-<ul *ngIf="user">
-  <li><span>Name</span>: {{user.name}}</li>
-  <li><span>Username</span>: {{user.username}}</li>
-  <li><span>Email</span>: {{user.email}}</li>
-  <li><span>Address</span>
-    <ul>
-      <li><span>Street</span>: {{user.address.street}}</li>
-      <li><span>Suite</span>: {{user.address.suite}}</li>
-      <li><span>City</span>: {{user.address.city}}</li>
-      <li><span>Zipcode</span>: {{user.address.zipcode}}</li>
-      <li><span>Geo</span>
-        <ul>
-          <li><span>Latitude</span>: {{user.address.geo.lat}}</li>
-          <li><span>Longitude</span>: {{user.address.geo.lng}}</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><span>Phone</span>: {{user.phone}}</li>
-  <li><span>Website</span>: {{user.website}}</li>
-  <li><span>Company</span>
-    <ul>
-      <li><span>Street</span>: {{user.company.name}}</li>
-      <li><span>Catch phrase</span>: {{user.company.catchPhrase}}</li>
-      <li><span>Business specialty</span>: {{user.company.bs}}</li>
-    </ul>
-  </li>
-</ul>
+<mat-card class="example-card" *ngIf="user">
 
-<button (click)="goBack()">go back</button>
+  <mat-card-header>
+    <mat-card-title>{{user.name}}</mat-card-title>
+    <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list role="list" >
+      <mat-list-item role="listitem"><span>Email</span>: {{user.email}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Phone</span>: {{user.phone}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Website</span>: {{user.website}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem"><span>Address</span></mat-list-item>
+      <mat-list-item role="listitem"><span>Street</span>: {{user.address.street}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Suite</span>: {{user.address.suite}}</mat-list-item>
+      <mat-list-item role="listitem"><span>City</span>: {{user.address.city}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Zipcode</span>: {{user.address.zipcode}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem"><span>Geo</span></mat-list-item>
+      <mat-list-item role="listitem"><span>Latitude</span>: {{user.address.geo.lat}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Longitude</span>: {{user.address.geo.lng}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem"><span>Company</span></mat-list-item>
+      <mat-list-item role="listitem"><span>Street</span>: {{user.company.name}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Catch phrase</span>: {{user.company.catchPhrase}}</mat-list-item>
+      <mat-list-item role="listitem"><span>Business specialty</span>: {{user.company.bs}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  
+</mat-card>
