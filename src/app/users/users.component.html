@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="users" class="mat-elevation-z8">
+<table mat-table [dataSource]="users" class="mat-elevation-z8" *ngIf="users">
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>

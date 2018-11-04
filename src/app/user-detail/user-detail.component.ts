@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { User } from '../user';
-import { UserService } from '../user.service';
+import { User } from '../core/user';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,6 +12,7 @@ import { UserService } from '../user.service';
 export class UserDetailComponent implements OnInit {
   @Input() id: number;
   user: User;
+  error: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +25,8 @@ export class UserDetailComponent implements OnInit {
 
   getUser(id): void {
     this.userService.getUser(id)
-      .subscribe(user => this.user = user);
+      .subscribe(
+        user => this.user = user,
+        error => this.error = error);
   }
 }

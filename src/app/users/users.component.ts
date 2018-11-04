@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
-import { UserService} from '../user.service';
-import { User } from '../user';
+import { UserService} from '../core/services/user.service';
+import { User } from '../core/user';
 import { UserDetailDialogComponent } from '../user-detail-dialog/user-detail-dialog.component';
 
 

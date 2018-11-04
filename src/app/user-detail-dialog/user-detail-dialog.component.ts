@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA, MatIconModule } from '@angular/material';
 
 @Component({
   selector: 'app-user-detail-dialog',
@@ -30,5 +30,9 @@ export class UserDetailDialogComponent implements OnInit {
   clearUrlParams(): void {
     const url: string = this.router.url.substring(0, this.router.url.indexOf('?'));
     this.router.navigateByUrl(url);
+  }
+
+  closeDialog(): void {
+    this.dialog.closeAll();
   }
 }

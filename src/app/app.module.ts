@@ -14,7 +14,10 @@ import {
   MatDialogModule,
   MatCardModule,
   MatListModule,
-  MatDividerModule, MatDialogRef, MAT_DIALOG_DATA
+  MatDividerModule,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+  MatIconModule
 } from '@angular/material';
 
 @NgModule({
@@ -34,7 +37,8 @@ import {
     MatDialogModule,
     MatCardModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatIconModule
   ],
   providers: [
     {
