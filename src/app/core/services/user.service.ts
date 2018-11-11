@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {Observable, throwError} from 'rxjs';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, retry } from 'rxjs/operators';
 
 import { User } from '../user';
 import { API } from '../config';
-import {catchError, retry} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
