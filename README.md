@@ -2,6 +2,18 @@ How much time I spent:
 
 I was studying Angular on tutorial 6 evenings for 1 hour. The result you can see here https://github.com/akbrest/angular-tour-of-heroes
 
+How to run project:
+
+1) `nmp install`
+
+2) `ng serve`
+
+3) Go to `http://localhost:4200/` on browser. Enjoy!
+
+Execute the unit tests:
+
+`ng test`
+
 # AngularUsersTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
